@@ -42,6 +42,11 @@ module Honeybadger
         Honeybadger::Api::Request.all(path, handler)
       end
 
+      def self.all2(project_id, start_date)
+        path = "projects/#{project_id}/faults"
+        Honeybadger::Api::Request.all(path, handler, start_date: start_date.to_time.to_i)
+      end
+
       # Public: Paginate all faults for a given project.
       def self.paginate(project_id, filters = {})
         path  = "projects/#{project_id}/faults"

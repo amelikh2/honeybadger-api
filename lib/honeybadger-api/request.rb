@@ -8,8 +8,8 @@ module Honeybadger
         @filters = filters
       end
 
-      def self.all(path, handler)
-        request = Honeybadger::Api::Request.new(path, handler)
+      def self.all(path, handler, start_date)
+        request = Honeybadger::Api::Request.new(path, handler, {occurred_after: start_date})
         request.all
       end
 
