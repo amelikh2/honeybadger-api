@@ -3,7 +3,7 @@ module Honeybadger
     class Notice
 
       attr_reader :id, :fault_id, :environment, :message, :request, :created_at
-#test
+
       # Public: Build a new instance of Notice
       #
       # opts - A Hash of attributes to initialize a Notice
