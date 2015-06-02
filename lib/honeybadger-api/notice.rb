@@ -2,7 +2,6 @@ module Honeybadger
   module Api
     class Notice
 
-      #test2
       attr_reader :id, :fault_id, :environment, :message, :request, :created_at
 
       # Public: Build a new instance of Notice
